@@ -7,7 +7,7 @@
 h1 {text-align: center;}
 body {
   /*background-color: #2980b9;*/
-  background-image: url("img5.jpg");
+  background-image: url("final image.jpg");
   font-family: Arial, Helvetica, sans-serif;
   background-size: cover;
   background-position: center;
@@ -63,19 +63,76 @@ div.flip-card{
   border-width: 5px;
 }
 
+input[type=checkbox]{
+  display: none;
+}
+
+label {
+  border: 0px solid #fff;
+  padding: 0px;
+  display: block;
+  position: relative;
+  margin: 0px;
+  cursor: pointer;
+}
+
+label:before {
+  background-color: white;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 100%;
+  border: 1px solid grey;
+  position: absolute;
+  top: -10px;
+  left: 0px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.4s;
+  transform: scale(0);
+}
+
+label img {
+  height: 100px;
+  width: 100px;
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+}
+
+:checked + label {
+  border-color: blue;
+  height: 148px;
+  width: 148px;
+}
+
+:checked + label:before {
+  content: "👏🏻";
+  background-color: white;
+  transform: scale(1);
+}
+
+:checked + label img {
+  transform: scale(0.8);
+  /* box-shadow: 0 0 5px #333; */
+  z-index: -1;
+}
+
 </style>
 </head>
 <body>
 
-<h1 style="color:white;">CRAZY EMOJI CARD</h1>
+<h1 style="color:white;font-family:Lucida Calligraphy;">🎉CRAZY EMOJI🎉</h1>
 <!-- <h3>Hover over the image below:</h3> -->
 <table>
   <tr>
-    <td>  <input type="checkbox" id="myCheckbox1" />
+    <td>
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="blessed.jpg" alt="Avatar" style="width:148px;height:148px;">
+               <input type="checkbox" id="myCheckbox0" />
+              <label  for="myCheckbox0"><img src="blessed.jpg" alt="Avatar" style="width:148px;height:148px;"></label>
           </div>
           <div class="flip-card-back">
             <h4>What do you pray for god if he is infront of you</h4>
@@ -83,23 +140,25 @@ div.flip-card{
         </div>
       </div>
   </td>
-  <td>  <input type="checkbox" id="myCheckbox1" />
+  <td>
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="care.jpg" alt="Avatar" style="width:148px;height:148px;">
+          <input type="checkbox" id="myCheckbox1" />
+          <label  for="myCheckbox1"><img src="care.jpg" alt="Avatar" style="width:148px;height:148px;"></label>
         </div>
         <div class="flip-card-back">
-        <h4>Favorite Holiday of the year</h4>
+        <h4>Best Conversation in your life</h4>
         </div>
       </div>
     </div>
   </td>
-  <td>  <input type="checkbox" id="myCheckbox1" />
+  <td>
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="cold.jpg" alt="Avatar" style="width:148px;height:148px;">
+           <input type="checkbox" id="myCheckbox2" />
+          <label  for="myCheckbox2"><img src="cold.jpg" alt="Avatar" style="width:148px;height:148px;"></label>
         </div>
         <div class="flip-card-back">
           <h4>which coldest place do you like to enroute to</h4>
@@ -107,23 +166,25 @@ div.flip-card{
       </div>
     </div>
   </td>
-  <td>  <input type="checkbox" id="myCheckbox1" />
+  <td>
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="cool.jpg" alt="Avatar" style="width:148px;height:148px;">
+          <input type="checkbox" id="myCheckbox3" />
+          <label  for="myCheckbox3"><img src="cool.jpg" alt="Avatar" style="width:148px;height:148px;"></label>
         </div>
         <div class="flip-card-back">
-          <h4>Favorite Holiday of the year</h4>
+          <h4>What If You Were Given A Chance To Go To The Moon, Would You Go?</h4>
         </div>
       </div>
     </div>
   </td>
-  <td>  <input type="checkbox" id="myCheckbox1" />
+  <td>
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="deepsmile.jpg" alt="Avatar" style="width:148px;height:148px;">
+           <input type="checkbox" id="myCheckbox4" />
+            <label  for="myCheckbox4"><img src="deepsmile.jpg" alt="Avatar" style="width:148px;height:148px;"></label>
         </div>
         <div class="flip-card-back">
           <h4>Best moment in your life</h4>
@@ -131,11 +192,12 @@ div.flip-card{
       </div>
     </div>
   </td>
-  <td>  <input type="checkbox" id="myCheckbox1" />
+  <td>
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="girl.jpg" alt="Avatar" style="width:148px;height:148px;">
+          <input type="checkbox" id="myCheckbox5" />
+            <label  for="myCheckbox5"><img src="girl.jpg" alt="Avatar" style="width:148px;height:148px;"></label>
         </div>
         <div class="flip-card-back">
           <h4>Share any of your childhood memories</h4>
@@ -144,14 +206,15 @@ div.flip-card{
     </div>
   </td>
 
-  <td>  <input type="checkbox" id="myCheckbox1" />
+  <td>
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="gossip.jpg" alt="Avatar" style="width:148px;height:148px;">
+          <input type="checkbox" id="myCheckbox6" />
+            <label  for="myCheckbox6"><img src="gossip.jpg" alt="Avatar" style="width:148px;height:148px;"></label>
         </div>
         <div class="flip-card-back">
-          <h4>Favorite Holiday of the year</h4>
+          <h4>What If You Could Say A Sentence Which The Whole World Could Hear, What Would You Say?</h4>
         </div>
       </div>
     </div>
@@ -160,92 +223,99 @@ div.flip-card{
 
 <tr>
 
-  <td>  <input type="checkbox" id="myCheckbox1" />
+  <td>
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="hug.jpg" alt="Avatar" style="width:148px;height:148px;">
+           <input type="checkbox" id="myCheckbox7" />
+            <label  for="myCheckbox7"><img src="hug.jpg" alt="Avatar" style="width:148px;height:148px;"></label>
         </div>
         <div class="flip-card-back">
-          <h4>Favorite Holiday of the year</h4>
+          <h4>Have you ever been told you look like someone famous, who was it?</h4>
         </div>
       </div>
     </div>
   </td>
 
-  <td>  <input type="checkbox" id="myCheckbox1" />
+  <td>
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="king.jpg" alt="Avatar" style="width:148px;height:148px;">
+           <input type="checkbox" id="myCheckbox8" />
+            <label  for="myCheckbox8"><img src="king.jpg" alt="Avatar" style="width:148px;height:148px;"></label>
         </div>
         <div class="flip-card-back">
-          <h4>Favorite Holiday of the year</h4>
+          <h4>Which person treats you as prince/king</h4>
         </div>
       </div>
     </div>
   </td>
 
-  <td>  <input type="checkbox" id="myCheckbox1" />
+  <td>
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="laugh.jpg" alt="Avatar" style="width:148px;height:148px;">
+           <input type="checkbox" id="myCheckbox9" />
+            <label  for="myCheckbox9"><img src="laugh.jpg" alt="Avatar" style="width:148px;height:148px;"></label>
         </div>
         <div class="flip-card-back">
-          <h4>Favorite Holiday of the year</h4>
+          <h4>As a kid, did you ever do something wrong but manage to pin it on your siblings?</h4>
         </div>
       </div>
     </div>
   </td>
 
-  <td>  <input type="checkbox" id="myCheckbox1" />
+  <td>
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="love.jpg" alt="Avatar" style="width:148px;height:148px;">
+           <input type="checkbox" id="myCheckbox10" />
+            <label  for="myCheckbox10"><img src="love.jpg" alt="Avatar" style="width:148px;height:148px;"></label>
         </div>
         <div class="flip-card-back">
-          <h4>Favorite Holiday of the year</h4>
+          <h4>Everyone has those recurring beautiful dreams.What was yours? </h4>
         </div>
       </div>
     </div>
   </td>
 
 
-  <td>  <input type="checkbox" id="myCheckbox1" />
+  <td>
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="mask.jpg" alt="Avatar" style="width:148px;height:148px;">
+          <input type="checkbox" id="myCheckbox11" />
+            <label  for="myCheckbox11"><img src="mask.jpg" alt="Avatar" style="width:148px;height:148px;"></label>
         </div>
         <div class="flip-card-back">
-          <h4>How would you contribute to covid workers</h4>
+          <h4>What are the transformations this lockdown brought in you?</h4>
         </div>
       </div>
     </div>
   </td>
-  <td>  <input type="checkbox" id="myCheckbox1" />
+  <td>
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="money.jpg" alt="Avatar" style="width:148px;height:148px;">
+          <input type="checkbox" id="myCheckbox12" />
+            <label  for="myCheckbox12"><img src="money.jpg" alt="Avatar" style="width:148px;height:148px;"></label>
         </div>
         <div class="flip-card-back">
-          <h4>What will you do if you win a lottery of 10 crores🤑</h4>
+          <h4>What will you do if you win a lottery of 10 crores</h4>
         </div>
       </div>
     </div>
   </td>
 
-<td>  <input type="checkbox" id="myCheckbox1" />
+<td>
   <div class="flip-card">
     <div class="flip-card-inner">
       <div class="flip-card-front">
-        <img src="party.jpg" alt="Avatar" style="width:148px;height:148px;">
+        <input type="checkbox" id="myCheckbox13" />
+          <label  for="myCheckbox13"><img src="party.jpg" alt="Avatar" style="width:148px;height:148px;"></label>
       </div>
       <div class="flip-card-back">
-        <h4>Favorite Holiday of the year</h4>
+        <h4>How do you like to spend your weekends?</h4>
       </div>
     </div>
   </div>
@@ -254,11 +324,12 @@ div.flip-card{
 
 <tr>
 
-  <td>  <input type="checkbox" id="myCheckbox1" />
+  <td>
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="queen.jpg" alt="Avatar" style="width:148px;height:148px;">
+          <input type="checkbox" id="myCheckbox14" />
+            <label  for="myCheckbox14"><img src="queen.jpg" alt="Avatar" style="width:148px;height:148px;"></label>
         </div>
         <div class="flip-card-back">
           <h4>Which person treats you as queen</h4>
@@ -266,11 +337,12 @@ div.flip-card{
       </div>
     </div>
   </td>
-  <td>  <input type="checkbox" id="myCheckbox1" />
+  <td>
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="riddle.jpg" alt="Avatar" style="width:148px;height:148px;">
+          <input type="checkbox" id="myCheckbox15" />
+            <label  for="myCheckbox15"><img src="riddle.jpg" alt="Avatar" style="width:148px;height:148px;"></label>
         </div>
         <div class="flip-card-back">
           <h4>What is the weirdest thing you have ever tried</h4>
@@ -280,11 +352,12 @@ div.flip-card{
 
   </td>
 
-  <td>  <input type="checkbox" id="myCheckbox1" />
+  <td>
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="santa.jpg" alt="Avatar" style="width:148px;height:148px;">
+          <input type="checkbox" id="myCheckbox16" />
+            <label  for="myCheckbox16"><img src="santa.jpg" alt="Avatar" style="width:148px;height:148px;"></label>
         </div>
         <div class="flip-card-back">
           <h4>What is the best gift you received till now?</h4>
@@ -293,53 +366,57 @@ div.flip-card{
     </div>
   </td>
 
-<td>  <input type="checkbox" id="myCheckbox1" />
+<td>
   <div class="flip-card">
     <div class="flip-card-inner">
       <div class="flip-card-front">
-        <img src="sarcasm.jpg" alt="Avatar" style="width:148px;height:148px;">
+        <input type="checkbox" id="myCheckbox17" />
+          <label  for="myCheckbox17"><img src="sarcasm.jpg" alt="Avatar" style="width:148px;height:148px;"></label>
       </div>
       <div class="flip-card-back">
-        <h4>Favorite Holiday of the year</h4>
+        <h4>What’s the hardest part about working/moving virtually for you? </h4>
       </div>
     </div>
   </div>
 </td>
 
-<td>  <input type="checkbox" id="myCheckbox1" />
+<td>
   <div class="flip-card">
     <div class="flip-card-inner">
       <div class="flip-card-front">
-        <img src="shock.jpg" alt="Avatar" style="width:148px;height:148px;">
+        <input type="checkbox" id="myCheckbox18" />
+          <label  for="myCheckbox18"><img src="shock.jpg" alt="Avatar" style="width:148px;height:148px;"></label>
       </div>
       <div class="flip-card-back">
-        <h4>Favorite Holiday of the year</h4>
+        <h4>What is one thing we would never guess about you?</h4>
       </div>
     </div>
   </div>
 </td>
 
-<td>  <input type="checkbox" id="myCheckbox1" />
+<td>
   <div class="flip-card">
     <div class="flip-card-inner">
       <div class="flip-card-front">
-        <img src="silent.jpg" alt="Avatar" style="width:148px;height:148px;">
+        <input type="checkbox" id="myCheckbox19" />
+          <label  for="myCheckbox19"><img src="silent.jpg" alt="Avatar" style="width:148px;height:148px;"></label>
       </div>
       <div class="flip-card-back">
-        <h4>Favorite Holiday of the year</h4>
+        <h4>Do you have any strange phobias?</h4>
       </div>
     </div>
   </div>
 
 </td>
-  <td>  <input type="checkbox" id="myCheckbox1" />
+  <td>
     <div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
-          <img src="sleep.jpg" alt="Avatar" style="width:148px;height:148px;">
+          <input type="checkbox" id="myCheckbox20" />
+            <label  for="myCheckbox20"><img src="sleep.jpg" alt="Avatar" style="width:148px;height:148px;"></label>
         </div>
         <div class="flip-card-back">
-          <h4>What is your longest period of sleep/nightout</h4>
+          <h4>Are you an earlybird or night owl?</h4>
         </div>
       </div>
     </div>
@@ -349,50 +426,54 @@ div.flip-card{
 
   <tr>
 
-    <td>  <input type="checkbox" id="myCheckbox1" />
+    <td>
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="smile.jpg" alt="Avatar" style="width:148px;height:148px;">
+            <input type="checkbox" id="myCheckbox21" />
+              <label  for="myCheckbox21"><img src="smile.jpg" alt="Avatar" style="width:148px;height:148px;"></label>
           </div>
           <div class="flip-card-back">
-            <h4>Favorite Holiday of the year</h4>
+            <h4>If you could have any celebrity be your best friend, which celebrity would you pick?</h4>
           </div>
         </div>
       </div>
     </td>
 
-    <td>  <input type="checkbox" id="myCheckbox1" />
+    <td>
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="star.jpg" alt="Avatar" style="width:148px;height:148px;">
+            <input type="checkbox" id="myCheckbox22" />
+              <label  for="myCheckbox22"><img src="star.jpg" alt="Avatar" style="width:148px;height:148px;"></label>
           </div>
           <div class="flip-card-back">
-            <h4>Favorite Holiday of the year</h4>
+            <h4>As a child, what did you want to be when you grew up(Dream hobby😉)?</h4>
           </div>
         </div>
       </div>
     </td>
 
-    <td>  <input type="checkbox" id="myCheckbox1" />
+    <td>
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="super.jpg" alt="Avatar" style="width:148px;height:148px;">
+            <input type="checkbox" id="myCheckbox23" />
+              <label  for="myCheckbox23"><img src="super.jpg" alt="Avatar" style="width:148px;height:148px;"></label>
           </div>
           <div class="flip-card-back">
-            <h4>Favorite Holiday of the year</h4>
+            <h4>If you could have any one superpower, which would you choose?</h4>
           </div>
         </div>
       </div>
 
     </td>
-<td>  <input type="checkbox" id="myCheckbox1" />
+<td>
   <div class="flip-card">
     <div class="flip-card-inner">
       <div class="flip-card-front">
-        <img src="taste.jpg" alt="Avatar" style="width:148px;height:148px;">
+        <input type="checkbox" id="myCheckbox24" />
+          <label  for="myCheckbox24"><img src="taste.jpg" alt="Avatar" style="width:148px;height:148px;"></label>
       </div>
       <div class="flip-card-back">
         <h4>Which food do you like the most(any dish)</h4>
@@ -403,37 +484,40 @@ div.flip-card{
 
 
 
-    <td>  <input type="checkbox" id="myCheckbox1" />
+    <td>
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="think.jpg" alt="Avatar" style="width:148px;height:148px;">
+             <input type="checkbox" id="myCheckbox25" />
+              <label  for="myCheckbox25"><img src="think.jpg" alt="Avatar" style="width:148px;height:148px;"></label>
           </div>
           <div class="flip-card-back">
-            <h4>Favorite Holiday of the year</h4>
+            <h4>If you had a time machine, would go back in time or into the future?</h4>
           </div>
         </div>
       </div>
     </td>
 
-    <td>  <input type="checkbox" id="myCheckbox1" />
+    <td>
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="wink.jpg" alt="Avatar" style="width:148px;height:148px;">
+            <input type="checkbox" id="myCheckbox26" />
+              <label  for="myCheckbox26"><img src="wink.jpg" alt="Avatar" style="width:148px;height:148px;"></label>
           </div>
           <div class="flip-card-back">
-            <h4>Favorite Holiday of the year</h4>
+            <h4>What’s the best prank you’ve ever played on someone?</h4>
           </div>
         </div>
       </div>
     </td>
 
-    <td>  <input type="checkbox" id="myCheckbox1" />
+    <td>
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
-            <img src="song.jpg" alt="Avatar" style="width:148px;height:148px;">
+            <input type="checkbox" id="myCheckbox27" />
+              <label  for="myCheckbox27"><img src="song.jpg" alt="Avatar" style="width:148px;height:148px;"></label>
           </div>
           <div class="flip-card-back">
             <h4>Are you a bathroom singer?(Sing ur fav song)</h4>
